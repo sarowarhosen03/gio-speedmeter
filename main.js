@@ -19,6 +19,7 @@ Longitude: 0
 <br>
 Speed:0Km/h
     `
+    id=null;
      }else {
           x.innerHTML=`Latitude: 0
     <br>
