@@ -25,12 +25,12 @@ Speed:0Km/h
     <br>
 Longitude: 0
 <br>
-Speed: Km/h
+Speed:... Km/h
 <br> Collecting Data.  ......
     `
        
        id=  navigator.geolocation.watchPosition(showPosition,()=>{},{
-          enableHighAccuracy: true,
+          enableHighAccuracy: true ,
   maximumAge: 0,
         });
         actionBtn.innerText="Stop "
@@ -45,5 +45,5 @@ Speed: Km/h
 
 function showPosition(position) {
   x.innerHTML = "Latitude: " + position.coords.latitude +
-  "<br>Longitude: " + position.coords.longitude +  "<br>Speed: " + Math.floor(position.coords.speed*3.6,2)+"Km/h";
+  "<br>Longitude: " + position.coords.longitude +  "<br>Speed: " + (position.coords.speed>=0?(Number (position.coords.speed*3.6).toFixed(2)):0.00)+"Km/h";
 }
